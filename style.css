@@ -1,0 +1,89 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+main {
+    position: fixed;
+    inset: 0px;
+    width: 40vw;
+    height: auto;
+    aspect-ratio: 1.636;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container {
+    text-align: left;
+    /* margin: 40px; */
+    margin-left: 3vw;
+    margin-top: 2.9vw;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3.5vw;
+    width: 100%;
+    max-width: 100px;
+    white-space: nowrap;
+    margin: 0px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 2vw;
+    margin: 0px;
+}
+
+#phoneContainer {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+#phoneNumber {
+    font-size: 2.7vw;
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#brushStroke {
+    width: 100%;
+    height: auto;
+}
+
+#rollerIcon {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    right: 5%;
+    bottom: 9%;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+small {
+    margin: 10px;
+    font-size: 1vw;
+    color: #222;
+}
