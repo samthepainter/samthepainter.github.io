@@ -5,31 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam the Painter</title>
+    <meta name="description" content="Sam the Painter is Painter decorator">
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <div class="container" id="front">
+
+    <div id="container">
+        <header>
             <h1>Sam Belcastro</h1>
             <h2>Painter / Decorator</h2>
-            <div id="phoneContainer" onclick="window.location='tel:0439667211'">
-                <!-- Public Domain Image -->
-                <img id="brushStroke" src="Brush Stroke.svg">
-                <a id="phoneNumber" href="tel:0439667211">0439 667 211</a>
+            <button hidden id="headerCall" onclick="window.location='tel:0439667211'">
+                <img id="headerCallIcon" src="Call.svg" aria-label="Call" alt="Icon of a phone.">
+            </button>
+        </header>
+        <main>
+            <p id="tagLine">Professional painting for Newcastle and the Hunter Valley.</p>
+
+            <div id=gallery>
+                <figure class="galleryItem galleryItem_1">
+                    <img width="200" height="300" src="Images/door.jpg" class="galleryImg" alt="Door">
+                </figure>
+                <figure class="galleryItem galleryItem_2">
+                    <img width="200" height="300" src="Images/ceiling.jpg" class="galleryImg"
+                        alt="White ceiling with black beams.">
+                </figure>
+                <figure class="galleryItem galleryItem_3">
+                    <img width="200" height="300" src="Images/deck.jpg" class="galleryImg" alt="Wall painted white.">
+                </figure>
+                <figure class="galleryItem galleryItem_4">
+                    <img width="200" height="300" src="Images/pergola.jpg" class="galleryImg" alt="Cream pergola.">
+                </figure>
+                <figure class="galleryItem galleryItem_5">
+                    <img width="200" height="300" src="Images/wall.jpg" class="galleryImg"
+                        alt="Brown deck with aqua pergola.">
+                </figure>
+                <figure class="galleryItem galleryItem_6">
+                    <img width="200" height="300" src="Images/outside.jpg" class="galleryImg"
+                        alt="Painter standing outside.">
+                </figure>
             </div>
-            <!-- Own Work -->
-            <img id="rollerIcon" src="Roller.svg">
-        </div>
-    </main>
-    <footer>
-        <small id="lic">Lic. No. 222644C</small>
-        <small id="abn">ABN: 51 497 058 914</small>
-    </footer>
+
+            <h3>Get a Free Quote</h3>
+            <button id="phoneContainer" onclick="window.location='tel:0439667211'">
+                <img width=500 height=85 id="brushStroke" src="Roller and Brush Stroke.png"
+                    alt="Illustration of a stroke of paint from a roller">
+                <a id="phoneNumber">0439 667 211</a>
+            </button>
+        </main>
+        <footer>
+            <small id="lic">Lic. No. 222644C</small>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
