@@ -1,16 +1,32 @@
 body {
     font-family: "Poppins", sans-serif;
-    background: #ECE9E6;
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
     margin: 0px;
+
+    --background-colour: #F3F3ED;
+    --theme-colour: #9ed6fc;
+    --accent-colour: #355B79;
+    --accent-colour-darker: #284458;
+
+    background-color: var(--background-colour);
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 header {
     position: sticky;
     top: 0;
-    padding: 10px 16px;
-    background: whitesmoke;
+    padding: 5px 16px;
+    padding-bottom: 30px;
+    background: linear-gradient(180deg, var(--theme-colour) 75%, transparent 100%);
     color: black;
     z-index: 10;
 }
@@ -27,130 +43,279 @@ header {
 
 h1 {
     font-weight: bold;
-    line-height: 30px;
-    font-size: min(9vw, 2.5em);
+    line-height: 11px;
+    font-size: min(7vw, 2.5em);
 }
 
 h2 {
     font-weight: normal;
-    line-height: 0px;
-    font-size: min(6vw, 1.6em);
+    line-height: 11px;
+    font-size: min(5vw, 1.6em);
 }
 
 h3 {
     text-align: center;
-    width: 100%;
-    font-size: min(6vw, 1.6em);
+    width: calc(100% - 20px);
+    font-size: min(6vw, 2em);
     font-weight: 400;
-    line-height: 0;
-    margin-top: 30px;
-}
-
-#tagLine {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.25em;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#headerCall {
-    width: 60px;
-    height: 60px;
-    background: none;
-    border: none;
-    outline: none;
-    position: absolute;
-    right: 0%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-#headerCallIcon {
-    width: 100%;
-    height: 100%;
-}
-
-#phoneContainer {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    border: none;
-    background: none;
-    cursor: pointer;
-    display: block;
-}
-
-#brushStroke {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#phoneNumber {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: black;
-    text-align: center;
-    padding: 20px;
-    font-size: min(5.5vw, 2.22em);
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-#rollerIcon {
-    width: 25%;
-    height: auto;
-    position: absolute;
-    right: 5%;
-    bottom: 9%;
-}
-
-
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
     margin: 10px;
 }
 
-.galleryImg {
+a {
+    color: var(--accent-colour);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--accent-colour-darker);
+    text-decoration-thickness: 3px;
+}
+
+#headerCall {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    border: none;
+
+    font-size: min(1.5em, 4vw);
+    text-decoration: none;
+
+    color: white;
+    background-color: var(--accent-colour);
+    box-shadow: rgba(99, 99, 99, 0.33) 2px 3px 9px;
+
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+#heroQ {
+    font-size: min(15vw, 2.3em);
+    margin: 0px 20px;
+    margin-top: -10px;
+}
+
+#heroA {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.25em;
+}
+
+
+
+/* Offset an invisible element to account for the header */
+#learnMoreAnchor {
+    display: block;
+    position: relative;
+    top: -110px;
+    visibility: hidden;
+}
+
+.serviceSubheading {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    gap: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .flexRow {
+        flex-direction: column;
+    }
+
+}
+
+.servicesContainer {
+    text-align: center;
+}
+
+.serviceBox {
+    flex: 1;
+}
+
+.serviceBox h4 {
+    margin: 10px;
+}
+
+.serviceBox ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutText {
+    flex: 3;
+}
+
+.aboutPicture {
+    text-align: center;
+    flex: 2;
+}
+
+.aboutPicture img {
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 40vh;
+    object-position: bottom center;
+}
+
+#faqContainer {
+    padding: 0 25px;
+}
+
+summary {
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    font-size: 1.25em;
+}
+
+details {
+    border: 1px solid #aaaaaa;
+    /* border-radius: 4px; */
+    padding: 0.5em 0.5em 0;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+.phoneContainer {
+    display: block;
+    padding: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    background: url("Images/Desktop/paintStroke.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.phoneLink {
+    position: relative;
+    right: min(10vw, 60px);
+    color: black;
+    text-align: center;
+    padding: 25px 100px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: min(7vw, 2.5em);
+}
+
+.phoneLink:hover {
+    color: black;
+    text-decoration: underline 5px;
+}
+
+@media screen and (max-width: 450px) {
+    .phoneContainer {
+        background-image: url("Images/Mobile/paintStroke.webp");
+    }
+
+    .phoneLink {
+        padding: 5px 10px;
+    }
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 5fr;
+    grid-auto-rows: 300px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.gridImage {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pictureImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.galleryItem {
-    margin: 0;
-}
 
-footer {
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
+@media screen and (min-width:1px) {
 
-small {
-    size: 1em;
-    color: #444;
-}
+    .boxTall {
+        grid-row: span 2;
+        grid-column: span 1;
+    }
 
-@media only screen and (max-width: 420px) {
-    #headerCall {
-        width: 50px;
-        height: 50px;
+    .boxMini {
+        grid-row: span 1;
+    }
+
+    .boxWide {
+        grid-column: span 3;
+    }
+
+    .boxSemiWide {
+        grid-column: span 2;
     }
 }
 
-@media only screen and (max-width: 250px) {
-    #headerCall {
+.contactContainer {
+    margin-top: 25px;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+small {
+    color: #555;
+    display: block;
+}
+
+.backgroundPaintColourContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    color: #525252;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+.backgroundPaintColourContainer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 1050px) {
+    .backgroundPaintColourContainer {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #headerCall {
+        /* display: none; */
+        padding: 5px 7px;
+        right: 7px;
     }
 }

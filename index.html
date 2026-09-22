@@ -1,19 +1,16 @@
 <!DOCTYPE html>
+<!-- Website by charlesbelcastro.com -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam the Painter</title>
+    <title>Painter in Newcastle | Sam the Painter</title>
     <meta name="description" content="Sam Belcastro, professional painter/decorator in Newcastle.">
     <meta name="theme-color" content="#9fd6fc" />
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+
+    <link href="Fonts/fonts.css">
 </head>
 
 <body>
@@ -21,50 +18,162 @@
         <header>
             <h1>Sam Belcastro</h1>
             <h2>Painter / Decorator</h2>
-            <button hidden id="headerCall" onclick="window.location='tel:0439667211'">
-                <img id="headerCallIcon" src="Call.svg" aria-label="Call" alt="Icon of a phone.">
-            </button>
+            <a id="headerCall" href='#contact'>
+                Free Quote
+            </a>
         </header>
         <main>
-            <p id="tagLine">Professional painting for Newcastle and the Hunter Valley.</p>
+            <p id="heroQ">Need a Painter in Newcastle?</p>
+            <p id="heroA">Sam the Painter is a licensed painter and decorator in Newcastle with over 20 years of
+                experience. <a href="#learnMoreAnchor">Learn More</a></p>
 
-            <div id=gallery>
-                <figure class="galleryItem galleryItem_1">
-                    <img width="200" height="300" src="Images/door.jpg" class="galleryImg" alt="Door">
-                </figure>
-                <figure class="galleryItem galleryItem_2">
-                    <img width="200" height="300" src="Images/ceiling.jpg" class="galleryImg"
-                        alt="White ceiling with black beams.">
-                </figure>
-                <figure class="galleryItem galleryItem_3">
-                    <img width="200" height="300" src="Images/deck.jpg" class="galleryImg" alt="Wall painted white.">
-                </figure>
-                <figure class="galleryItem galleryItem_4">
-                    <img width="200" height="300" src="Images/pergola.jpg" class="galleryImg" alt="Cream pergola.">
-                </figure>
-                <figure class="galleryItem galleryItem_5">
-                    <img width="200" height="300" src="Images/wall.jpg" class="galleryImg"
-                        alt="Brown deck with aqua pergola.">
-                </figure>
-                <figure class="galleryItem galleryItem_6">
-                    <img width="200" height="300" src="Images/outside.jpg" class="galleryImg"
-                        alt="Painter standing outside.">
-                </figure>
+            <div class="galleryGrid">
+                <div class="gridImage boxWide">
+                    <picture>
+                        <source srcset="Images/Mobile/greyHouse.webp" media="(max-width: 450px)" />
+                        <img alt="Exterior of a house with grey walls and white posts." class="pictureImage"
+                            src="Images/Desktop/greyHouse.webp">
+                    </picture>
+                </div>
+                <div class="gridImage boxMini">
+                    <picture>
+                        <source srcset="Images/Mobile/door.webp" media="(max-width: 450px)" />
+                        <img alt="Wooden door set in an arch painted white." class="pictureImage"
+                            src="Images/Desktop/door.webp">
+                    </picture>
+                </div>
+
+                <div class="gridImage boxMini">
+                    <picture>
+                        <source srcset="Images/Mobile/pergola.webp" media="(max-width: 450px)" />
+                        <img alt="Pergola posts in the process of being painted cream." class="pictureImage"
+                            src="Images/Desktop/pergola.webp">
+                    </picture>
+                </div>
+
+                <div class="gridImage boxWide">
+                    <picture>
+                        <source srcset="Images/Mobile/blueHouse.webp" media="(max-width: 450px)" />
+                        <img alt="Exterior house with white walls, white posts, and blue accents." class="pictureImage"
+                            src="Images/Desktop/blueHouse.webp">
+                    </picture>
+                </div>
+
+                <div class="gridImage boxWide">
+                    <picture>
+                        <source srcset="Images/Mobile/deck.webp" media="(max-width: 450px)" />
+
+                        <img alt="Deck that was recently oiled." class="pictureImage" src="Images/Desktop/deck.webp">
+                    </picture>
+                </div>
+
+                <div class="gridImage boxMini">
+                    <picture>
+                        <source srcset="Images/Mobile/wall.webp" media="(max-width: 450px)" />
+                        <img alt="White wall drying. Drop sheets cover the floor." class="pictureImage"
+                            src="Images/Desktop/wall.webp">
+                    </picture>
+                </div>
             </div>
 
-            <h3>Get a Free Quote</h3>
-            <button id="phoneContainer" onclick="window.location='tel:0439667211'">
-                <img width=500 height=85 id="brushStroke" src="Roller and Brush Stroke.png"
-                    alt="Illustration of a stroke of paint from a roller">
-                <a id="phoneNumber">0439 667 211</a>
-            </button>
-        </main>
-        <footer>
-            <small id="lic">Lic. No. 222644C</small>
-        </footer>
-    </div>
 
-    <script src="script.js"></script>
+            <div id="learnMoreAnchor"></div>
+
+            <h3>I Can Paint Anything!</h3>
+            <div class="flexRow servicesContainer">
+                <div class="serviceBox">
+                    <h4>Interior Painting</h4>
+                    <ul>
+                        <li>Walls</li>
+                        <li>Ceilings</li>
+                        <li>Doors & Frames</li>
+                    </ul>
+                </div>
+                <div class="serviceBox">
+                    <h4>Exterior Painting</h4>
+                    <ul>
+                        <li>Brick</li>
+                        <li>Render</li>
+                        <li>Decking</li>
+                    </ul>
+                </div>
+                <div class="serviceBox">
+                    <h4>Commercial Painting</h4>
+                    <p>Professional service with quality paint to make your business beautiful.</p>
+                </div>
+            </div>
+
+            <h3>Why Choose Sam?</h3>
+            <div class="flexRow aboutLayout">
+                <ul class="aboutText">
+                    <li>Over 20 years experience painting</li>
+                    <li>Professional quality that exceeds the Australian Standard</li>
+                    <li>3-coat system for full coverage and longevity</li>
+                    <li>Diligent preparation including washing, sanding, gap filling, and hole patching</li>
+                    <li>High attention to detail</li>
+                </ul>
+                <picture class="aboutPicture">
+                    <source srcset="Images/Mobile/outside.webp" media="(max-width: 450px)" />
+
+                    <img alt="Sam the Painter with a paint brush and paint pot." class="pictureImage"
+                        src="Images/Desktop/outside.webp">
+                </picture>
+            </div>
+
+
+            <h3>Frequently Asked Questions</h3>
+            <div id="faqContainer">
+                <details name="faq">
+                    <summary>What areas do you service?</summary>
+                    Sam the Painter is based in Newcastle and serves the Newcastle, Nelsons Bay, Lake Macquarie, and
+                    Hunter Valley
+                    regions. This includes suburbs in Newcastle, NSW such as: Merewether, Lambton, Georgetown, Hamilton,
+                    Waratah, Mayfield, and Wallsend.
+                </details>
+                <details name="faq">
+                    <summary>Are you licensed and insured?</summary>
+                    Sam the Painter is an insured and fully licensed painter and decorator in New South Wales. You can
+                    <a href="https://verify.licence.nsw.gov.au/details/Contractor%20Licence/1-6ZZ66D">verify the
+                        license online</a>.
+                </details>
+                <details name="faq">
+                    <summary>Can you help me with colours?</summary>
+                    Yes. Choosing colours can be one of the most difficult steps of painting your home. With 20 years of
+                    painting experience, I am very knowledgeable with colours and can offer colour consultancy if
+                    needed.
+                </details>
+                <details name="faq">
+                    <summary>Can you paint specialty textures and finishes?</summary>
+                    Yes. I am an expert in many different kinds of finishes including texture paint.
+                </details>
+                <details name="faq">
+                    <summary>What paint brands do you use?</summary>
+                    I use top quality paint from respected brands such as Taubmans.
+                </details>
+                <details name="faq">
+                    <summary>Do I need to do anything before you come?</summary>
+                    No. I handle all aspects of the project including cleaning and preparing all surfaces.
+                </details>
+                <details name="faq">
+                    <summary>Do you charge for quotes?</summary>
+                    No. My quotes are free of charge and free of obligation.
+                </details>
+            </div>
+            <div class="contactContainer">
+                <h3 id="contact">Get a Free Quote</h3>
+                <div class="phoneContainer">
+                    <a class="phoneLink" href="tel:0439667211">0439 667 211</a>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <small>Lic. No. 222644C © 2026 Sam Belcastro</small>
+        </footer>
+
+        <div class="backgroundPaintColourContainer">
+            <p>#F3F3ED</p>
+            <p>Taubmans Crisp White</p>
+        </div>
 </body>
 
 </html>
