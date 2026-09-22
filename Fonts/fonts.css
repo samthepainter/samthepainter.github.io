@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Poppins";
-    src: url("Poppins-Regular.ttf");
+    src: url("https://sambelcastro.com/Fonts/Poppins-Regular.ttf");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url("Poppins-Bold.ttf");
+    src: url("https://sambelcastro.com/Fonts/Poppins-Bold.ttf");
     font-style: normal;
     font-weight: bold;
 }
